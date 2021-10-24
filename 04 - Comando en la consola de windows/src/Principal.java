@@ -22,7 +22,7 @@ public class Principal {
 
 			int i = sInput.read();
 			if (i != -1) {
-				sResultado += "Un mensaje: ";
+				sResultado += "Un mensaje - ";
 			}
 			while (i != -1) {
 				sResultado += (char)(i);
@@ -32,7 +32,7 @@ public class Principal {
 			int j = sError.read();
 
 			if (j != -1) {
-				sResultado += "Un error: ";
+				sResultado += "Un error - ";
 			}
 
 			while (j != -1) {
