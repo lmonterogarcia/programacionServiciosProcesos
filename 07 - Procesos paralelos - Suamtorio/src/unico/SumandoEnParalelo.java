@@ -31,24 +31,21 @@ public class SumandoEnParalelo {
 		File suma1 = new File("suma1");
 		File suma2 = new File("suma2");
 		
-		// Creo los ProcessBuilder
-		ProcessBuilder builder1 = new ProcessBuilder(javaBin, "-cp", classpath, className, String.valueOf(1),
-				String.valueOf(5)).redirectOutput(suma1);
-		ProcessBuilder builder2 = new ProcessBuilder(javaBin, "-cp", classpath, className, String.valueOf(6),
-				String.valueOf(10)).redirectOutput(suma2);
-		
 		//Creo los procesos qeu van a ejecutarse en paralelo
-		Process process1, process2;
 		
 		try {
-			// Ejecuto los procesos
-			process1 = builder1.start();
-			process2 = builder2.start();
-			process1.wait();
-			process2.wait();
+			// Creo los procesos, les digo donde tiene que guardar los output y los ejecuto
+			Process process1 =new ProcessBuilder(javaBin, "-cp", classpath, className, String.valueOf(1),
+					String.valueOf(5)).redirectOutput(suma1).start();
+			Process process2 = new ProcessBuilder(javaBin, "-cp", classpath, className, String.valueOf(6),
+					String.valueOf(10)).redirectOutput(suma2).start();
 			
+			// Esperamos aque acaben los procesos
+//			process1.wait();
+//			process2.wait();
 			
-		} catch (IOException | InterruptedException ex) {
+//		} catch (IOException | InterruptedException ex) {
+		} catch (IOException ex) {
 			System.err.println("Error: " + ex.toString());
 			System.exit(-1);
 		}
@@ -66,6 +63,7 @@ public class SumandoEnParalelo {
 			
 			// Imprimimos por pantalla la suma
 			System.out.println("El resultado es: " + (iResultado1 + iResultado2));
+			
 		} catch (IOException ex) {
 			System.err.println("Error: " + ex.toString());
 			System.exit(-1);
