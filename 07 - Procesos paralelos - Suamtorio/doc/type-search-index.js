@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"unico","l":"Sumador"},{"p":"unico","l":"SumandoEnParalelo"}];updateSearchResults();
