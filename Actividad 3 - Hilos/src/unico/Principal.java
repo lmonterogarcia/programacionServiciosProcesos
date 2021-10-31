@@ -8,9 +8,16 @@ public class Principal extends Thread{
 		
 		
 		String sNombre = pedirNombre();
+		String sNombre2 = pedirNombre();
+		String sNombre3 = pedirNombre();
+		
 		Principal hilo1 = new Principal(sNombre);
+		Principal hilo2 = new Principal(sNombre2);
+		Principal hilo3 = new Principal(sNombre3);
 		
 		hilo1.start();
+		hilo2.start();
+		hilo3.start();
 
 	}
 	
@@ -33,7 +40,7 @@ public class Principal extends Thread{
 			}
 			
 			try {
-				this.sleep(4500);
+				this.sleep(500);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
