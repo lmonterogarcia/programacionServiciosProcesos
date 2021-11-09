@@ -58,7 +58,7 @@ public class SumandoEnParalelo {
 	private static void sumarNumeros(int iNumero1, int iNumero2, File suma1, File suma2) {
 
 		// Defino dónde está el home de java
-		String jav0416aHome = System.getProperty("java.home");
+		String javaHome = System.getProperty("java.home");
 
 		// Defino dónde está el bin de Java
 		String javaBin = javaHome + File.separator + "bin" + File.separator + "java";
