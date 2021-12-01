@@ -11,7 +11,7 @@ public class Principal {
 
 		//Creamos el proceso
 		//				ProcessBuilder pb = new ProcessBuilder("bash", "-c", "date");
-		ProcessBuilder pb = new ProcessBuilder("bash", "-c", "werfe");
+		ProcessBuilder pb = new ProcessBuilder("bash", "-c", "date");
 
 
 		try {

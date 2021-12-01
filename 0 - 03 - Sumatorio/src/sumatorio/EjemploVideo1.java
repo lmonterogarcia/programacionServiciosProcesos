@@ -27,7 +27,6 @@ public class EjemploVideo1 {
         numero1 = teclado.nextInt();
         System.out.println("Dame otro número:");
         numero2 = teclado.nextInt();
-        // Sumador suma = new Sumador();
         
         try 
         {
