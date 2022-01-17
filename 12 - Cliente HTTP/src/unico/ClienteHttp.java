@@ -12,10 +12,18 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * 
+ * @author Luis Montero
+ * 
+ * Bibliografia: https://www.codejava.net/java-se/networking/java-urlconnection-and-httpurlconnection-examples
+ * informacione de elementos del Header: https://developer.mozilla.org/es/docs/Web/HTTP/Headers
+ *
+ */
 public class ClienteHttp {
 
 	private String sUrl;
-
+	
 	public ClienteHttp(String sUrl) {
 
 		try {
@@ -57,25 +65,25 @@ public class ClienteHttp {
 
 //			// Otra forma de solicitar la informacion del Header, pero no toda sino la que
 //			// nos interesa
-//			int responseCode = httpConn.getResponseCode();
-//			String responseMessage = httpConn.getResponseMessage();
-//			String contentType = httpConn.getContentType();
-//			String contentEncoding = httpConn.getContentEncoding();
-//			int contentLength = httpConn.getContentLength();
+//			int iCodigoRespuesta = httpConn.getResponseCode();
+//			String sMensajeRespuesta = httpConn.getResponseMessage();
+//			String sTipoContenido = httpConn.getContentType();
+//			String sCodificacionContenido = httpConn.getContentEncoding();
+//			int iLongitudContenido = httpConn.getContentLength();
 //
-//			long date = httpConn.getDate();
-//			long expiration = httpConn.getExpiration();
-//			long lastModified = httpConn.getLastModified();
+//			long lFecha = httpConn.getDate();
+//			long lFechaExpiracion = httpConn.getExpiration();
+//			long lFechaModificacion = httpConn.getLastModified();
 //
 //			// Impprimir por consola al información solicitada
-//			System.out.println("Response Code:\n\t" + responseCode);
-//			System.out.println("Response Message:\n\t" + responseMessage);
-//			System.out.println("Content Type:\n\t" + contentType);
-//			System.out.println("Content Encoding:\n\t" + contentEncoding);
-//			System.out.println("Content Length:\n\t" + contentLength);
-//			System.out.println("Date:\n\t" + new Date(date));
-//			System.out.println("Expiration:\n\t" + new Date(expiration));
-//			System.out.println("Last Modified:\n\t" + new Date(lastModified));
+//			System.out.println("Response Code:\n\t" + iCodigoRespuesta);
+//			System.out.println("Response Message:\n\t" + sMensajeRespuesta);
+//			System.out.println("Content Type:\n\t" + sTipoContenido);
+//			System.out.println("Content Encoding:\n\t" + sCodificacionContenido);
+//			System.out.println("Content Length:\n\t" + iLongitudContenido);
+//			System.out.println("Date:\n\t" + new Date(lFecha));
+//			System.out.println("Expiration:\n\t" + new Date(lFechaExpiracion));
+//			System.out.println("Last Modified:\n\t" + new Date(lFechaModificacion));
 
 			// Solicitar .html completo de la dirección web
 			System.out.println("\nArchivo html:\n");
@@ -87,6 +95,8 @@ public class ClienteHttp {
 				System.out.println(linea);
 			}
 
+			httpConn.disconnect();
+			
 		} catch (MalformedURLException e) {
 			System.err.println("Error Malformed: " + e.getMessage());
 		} catch (IOException e) {
