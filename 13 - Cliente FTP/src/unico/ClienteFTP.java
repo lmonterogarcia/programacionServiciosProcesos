@@ -14,7 +14,7 @@ public class ClienteFTP {
         FTPClient clienteFTP = new FTPClient();
 
         //Datos para conectarme al servidor
-        String sFtp = "localhost";
+        String sFtp = "10.192.120.41";
         String sUsuario = "medac";
         String sPass = "medac";
 

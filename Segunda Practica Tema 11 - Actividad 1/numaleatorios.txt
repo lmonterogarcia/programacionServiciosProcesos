@@ -1,0 +1,13 @@
+Socket[addr=/127.0.0.1,port=62769,localport=5056] - 313
+Socket[addr=/127.0.0.1,port=62769,localport=5056] - 52
+Socket[addr=/127.0.0.1,port=62769,localport=5056] - 173
+Socket[addr=/127.0.0.1,port=62778,localport=5056] - 446
+Socket[addr=/127.0.0.1,port=62778,localport=5056] - 149
+Socket[addr=/127.0.0.1,port=62790,localport=5056] - 221
+Socket[addr=/127.0.0.1,port=62790,localport=5056] - 240
+Socket[addr=/127.0.0.1,port=62790,localport=5056] - 194
+Socket[addr=/127.0.0.1,port=62790,localport=5056] - 429
+Socket[addr=/127.0.0.1,port=62790,localport=5056] - 31
+Socket[addr=/127.0.0.1,port=62790,localport=5056] - 157
+Socket[addr=/127.0.0.1,port=62790,localport=5056] - 120
+Socket[addr=/127.0.0.1,port=62816,localport=5056] - 206
