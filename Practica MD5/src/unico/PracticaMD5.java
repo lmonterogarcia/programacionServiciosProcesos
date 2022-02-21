@@ -7,10 +7,6 @@ import java.util.Scanner;
 import com.google.common.base.Charsets;
 import com.google.common.hash.*;
 
-/**
- *
- * @author Javier Campallo, Manuel Cañas y Luis Montero
- */
 public class PracticaMD5 {
 
 	public PracticaMD5() {

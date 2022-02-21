@@ -14,10 +14,10 @@ public class Ctrl_Login {
 
 	public static void conectar() {
 		
-		String sha256hexPass = Hashing.md5().hashString(String.valueOf(Login.txtPassword.getPassword()), Charsets.UTF_8).toString();
+		String md5Pass = Hashing.md5().hashString(String.valueOf(Login.txtPassword.getPassword()), Charsets.UTF_8).toString();
 		
 		try {
-			if (LoginLogic.verificarAdmin(Login.txtUsuario.getText(), sha256hexPass)) {
+			if (LoginLogic.verificarAdmin(Login.txtUsuario.getText(), md5Pass)) {
 				JOptionPane.showMessageDialog(Login.window,
 						"Usuario o contraseña CORRECTOS",
 						"Gestión de Login", JOptionPane.PLAIN_MESSAGE);
